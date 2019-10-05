@@ -14,7 +14,10 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/tooplate-style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
     <script>
         var renderPage = true;
 
@@ -25,11 +28,39 @@
             renderPage = false;
         }
     </script>
+    <style type="text/css">
+        body {
+            background: #fff;
+            transition: filter 3s;
+        }
+
+        .filtered {
+            filter: grayscale(100%);
+        }
+
+        .grayscaleButton {
+            color: #E04F70;
+            padding: 10px;
+            background: none;
+            border-top: #3CB356 2px solid;
+            border-bottom: #46A0D7 2px solid;
+            border-right: 2px solid #FD8B0C;
+            border-left: 2px solid purple;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: 800;
+            display: block;
+            width: 150px;
+            position: absolute;
+            top: 5%;
+            left: auto;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body id="body1">
-<!--动画-->
-<div class="container1 ">
     <!-- Loader -->
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -43,11 +74,6 @@
             <!-- Sidebar -->
             <div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 
-                <button class="grayscaleButton" title="下雨天怎么能是多彩的颜色，点我！">灰度</button>
-                <p class="sliderText">
-                    <input type="range" min="0" max="100" value="50" class="slider" id="slider" title="这是控制雨滴的魔法！！"/>
-                <div class="splash"></div>
-
                 <button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
 
                 <div class="inner">
@@ -55,28 +81,31 @@
                     <nav id="tmMainNav" class="tm-main-nav">
                         <ul>
                             <li>
+                                <button class="grayscaleButton" title="下雨天怎么能是多彩的颜色，点我！">灰度</button>
+                            </li>
+                            <li>
                                 <a href="#intro" id="tmNavLink1" class="scrolly active"
-                                   data-bg-img="constructive_bg_01.jpg" data-page="#tm-section-1">
+                                   data-bg-img="wallpaper.jpg" data-page="#tm-section-1">
                                     <i class="fas fa-home tm-nav-fa-icon"></i>
                                     <span>主页</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="constructive_bg_02.jpg"
+                                <a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="wallpaper.jpg"
                                    data-page="#tm-section-2" data-page-type="carousel">
                                     <i class="fas fa-map tm-nav-fa-icon"></i>
                                     <span>待开发</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg"
+                                <a href="#company" class="scrolly" data-bg-img="wallpaper.jpg"
                                    data-page="#tm-section-3">
                                     <i class="fas fa-users tm-nav-fa-icon"></i>
                                     <span>所学技术</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg"
+                                <a href="#contact" class="scrolly" data-bg-img="wallpaper.jpg"
                                    data-page="#tm-section-4">
                                     <i class="fas fa-comments tm-nav-fa-icon"></i>
                                     <span>联系我</span>
@@ -199,10 +228,10 @@
                             <div class="col-md-6 col-sm-12 tm-contact-col">
                                 <div class="tm-address-box">
                                     <p>提交信息还未开发，如果需要联系我！</p><br/>
-									<a href="https://weibo.com/6726107500/profile" target="_blank"><img src="img/weibo.png" style="width: 50px;height: 50px;"></a>
-									<a href="tencent://message/?uin=1519920672&Site=&Menu=yes" target="_blank"><img src="img/QQ.png" style="width: 50px;height: 50px;"></a>
-									<a href="https://www.zhihu.com/people/mcshangyun/activities" target="_blank"><img src="img/zhihu.png" style="width: 50px;height: 50px;"></a>
-									<a href="https://github.com/mcshangyun" target="_blank"><img src="img/github.png" style="width: 50px;height: 50px;"></a>
+									<a href="https://weibo.com/6726107500/profile" target="_blank"><img src="img/weibo.png" style="width: 50px;height: 50px;background-color: #666e76;"></a>
+									<a href="tencent://message/?uin=1519920672&Site=&Menu=yes" target="_blank"><img src="img/QQ.png" style="width: 50px;height: 50px; background-color: #666e76;"></a>
+									<a href="https://www.zhihu.com/people/mcshangyun/activities" target="_blank"><img src="img/zhihu.png" style="width: 50px;height: 50px;background-color: #666e76;"></a>
+									<a href="https://github.com/mcshangyun" target="_blank"><img src="img/github.png" style="width: 50px;height: 50px; background-color: #666e76;"></a>
                                     <address style="position: relative;top: 25px; font-size: 22px;">
                                         梦想是遥不可及的，但前方的路一直在自己脚下！！！！
 										Dreams are out of reach, but the road ahead is always at your feet！！！！
@@ -217,19 +246,12 @@
                 <p class="tm-copyright-text">Copyright &copy; 2019 mcshangyun - Design/参照网上素材/如侵权 - Tell Me <a
                             href="tencent://message/?uin=1519920672&Site=&Menu=yes" title="联系我" target="_blank">联系我</a></p>
             </footer>
-        </div>    <!-- row -->
+        </div><!-- row -->
     </div>
     <div id="preload-01"></div>
     <div id="preload-02"></div>
     <div id="preload-03"></div>
     <div id="preload-04"></div>
-
-</div>
-
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
 
 <script>
 
@@ -396,57 +418,8 @@
     });
 
     const D = document;
-    const body1 = document.getElementById("body1");
+    const body1=D.getElementById("body1");
     const grayscaleButton = D.querySelector(".grayscaleButton");
-    const container = D.querySelector(".container1");
-    const slider = D.getElementById("slider");
-
-    function randomRange(minNum, maxNum) {
-        return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
-    }
-
-    function rain(fall) {
-        for (var i = 0; i < fall; i++) {
-
-            let drop = D.createElement("div");
-            let splash = D.createElement("div");
-
-            let randomLeft = randomRange(0, 1600);
-
-            drop.classList.add("drop");
-            drop.style.left = randomLeft + "px";
-            drop.style.top = randomRange(-1000, 1400) + "px";
-
-            if (i % 2 === 0) {
-                splash.classList.add("splash");
-                splash.style.bottom = Math.floor(Math.random() * 100) + "px";
-                splash.style.left = randomLeft + "px";
-                splash.style.animation = "splashing " + randomRange(.2, .7) + "s linear infinite";
-                container.appendChild(splash);
-            }
-
-
-            container.appendChild(drop);
-
-        }
-    }
-
-    slider.oninput = function () {
-
-        let rainy = D.getElementsByClassName('drop');
-        let splashes = D.getElementsByClassName("splash");
-        while (rainy[0]) {
-            rainy[0].parentNode.removeChild(rainy[0]);
-        }
-        while (splashes[0]) {
-            splashes[0].parentNode.removeChild(splashes[0]);
-        }
-
-        let sliderValue = slider.value;
-        rain(sliderValue * 3);
-    }
-    var elementById = document.getElementById("body1");
-    elementById.onload = rain(200);
 
     grayscaleButton.onclick = function () {
         if (body1.classList.contains("filtered")) {
